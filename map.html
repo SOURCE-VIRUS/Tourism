@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Owerri Tourism Map</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+#map-container {
+    height: 500px;
+    /* Add specific styles for the map container here (if using Google Maps API or Leaflet) */
+}
+
+section {
+    margin: 1rem;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #ddd;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+    </style>
+
+</head>
+<body>
+    <header>
+        <h1>Owerri Tourism Map</h1>
+    </header>
+    <div id="map-container">
+        <!-- Insert interactive map here (e.g., Google Maps API or Leaflet) -->
+    </div>
+    <section id="attractions">
+        <h2>Popular Tourist Attractions in Owerri</h2>
+        <ul>
+            <li>Nekede Zoo</li>
+            <li>Mbari Cultural and Art Centre</li>
+            <li>Dan Anyiam Stadium</li>
+            <li>Ngwu Spring Natural Water</li>
+            <li>Heroes Square</li>
+        </ul>
+    </section>
+    <footer>
+        <p>&copy; 2023 Owerri Tourism | All rights reserved.</p>
+    </footer>
+
+    <script>
+        function initMap() {
+            const owerri = { lat: 5.4833, lng: 7.0333 }; // Coordinates for Owerri
+            const map = new google.maps.Map(document.getElementById("map-container"), {
+                zoom: 13,
+                center: owerri,
+            });
+
+            // Add markers for tourist attractions
+            const attractions = [
+                { position: { lat: 5.4905, lng: 7.0299 }, title: "Nekede Zoo" },
+                { position: { lat: 5.5021, lng: 7.0311 }, title: "Mbari Cultural and Art Centre" },
+                { position: { lat: 5.4799, lng: 7.0319 }, title: "Dan Anyiam Stadium" },
+                { position: { lat: 5.4824, lng: 7.0273 }, title: "Ngwu Spring Natural Water" },
+                { position: { lat: 5.4816, lng: 7.0287 }, title: "Heroes Square" },
+            ];
+
+            attractions.forEach((attraction) => {
+                const marker = new google.maps.Marker({
+                    position: attraction.position,
+                    map: map,
+                    title: attraction.title,
+                });
+
+                // Add info window for each marker
+                const infoWindow = new google.maps.InfoWindow({
+                    content: attraction.title,
+                });
+
+                marker.addListener("click", () => {
+                    infoWindow.open(map, marker);
+                });
+            });
+        }
+    </script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&callback=initMap" 
+async 
+defer></script>
+
+
+</body>
+</html>

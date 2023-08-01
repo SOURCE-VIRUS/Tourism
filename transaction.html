@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="title icon" type="image/png" href="Images/logo.png">
+
+    <link rel="stylesheet" href="styles/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles/css2.css">
+    <link rel="stylesheet" href="styles/media.css">
+
+    <style>
+        * {
+      box-sizing: border-box;
+    }
+    .menu{
+            position: fixed;
+            width: 100%;
+            z-index: 100;
+            top: 0;
+        }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #50afe6cc;
+    }
+    .containerr {
+      max-width: 1000px;
+      margin: 0 auto;
+      margin-top: 50px;
+      padding: 20px;
+      background-color: #161616ce;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+        
+    </style>
+
+        <title>User Dashboard</title>
+    </head>
+    <body>
+        <div class="col-md-12 menu">
+            <div class="col-md-8">
+                <ul>
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="discover.html">More</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-4 search">
+                <form action="">
+                    <input type="text" placeholder="search">
+                    <button>
+                        <i class="fa fa-search"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+        <section class="payment-history-section">
+            <h2>Activity History</h2>
+            <table>
+                <tr>
+                    <th>Date</th>
+                    <th>Payment Method</th>
+                    <th>Amount</th>
+                </tr>
+                <tr>
+                    <td>2023-07-25</td>
+                    <td>Credit Card</td>
+                    <td>$100</td>
+                </tr>
+                <tr>
+                    <td>2023-07-20</td>
+                    <td>PayPal</td>
+                    <td>$75</td>
+                </tr>
+                <!-- Add more payment history rows here -->
+            </table>
+        </section>
+            
+        </body>

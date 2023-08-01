@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="title icon" type="image/png" href="Images/logo.png">
+
+    <link rel="stylesheet" href="styles/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles/css2.css">
+    <link rel="stylesheet" href="styles/media.css">
+
+    <style>
+        body {
+            background-color: aquamarine;
+        }
+
+    </style>
+
+        <title>Gallary</title>
+    </head>
+    <body>
+        <div class="col-md-12 menu">
+            <div class="col-md-8">
+                <ul>
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="discover.html">More</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-4 search">
+                <form action="">
+                    <input type="text" placeholder="search">
+                    <button>
+                        <i class="fa fa-search"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <section class="gallery-section">
+            <h2>Photo Gallery</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="Images/lake1.jpg" alt="Image 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="Images/hotel3.jpg" alt="Image 2">
+                </div>
+                <div class="gallery-item">
+                    <img src="Images/lake2.jpg" alt="Image 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="Images/hotel2.jpg" alt="Image 2">
+                </div>
+                <div class="gallery-item">
+                    <img src="Images/lake5.jpg" alt="Image 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="Images/hotel1.jpg" alt="Image 2">
+                </div>
+                <div class="gallery-item">
+                    <img src="Images/lake6.jpg" alt="Image 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="Images/hotel6.jpg" alt="Image 2">
+                </div>
+                <div class="gallery-item">
+                    <img src="Images/lake4.jpg" alt="Image 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="Images/hotel2.jpg" alt="Image 2">
+                </div>
+                <div class="gallery-item">
+                    <img src="Images/zoo3.jpg" alt="Image 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="Images/zoo.jpg" alt="Image 2">
+                </div>
+                <div class="gallery-item">
+                    <img src="Images/zoo1.jpg" alt="Image 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="Images/zoo2.jpg" alt="Image 2">
+                </div>
+                <div class="gallery-item">
+                    <img src="Images/hotel6.jpg" alt="Image 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="Images/hotel3.jpg" alt="Image 2">
+                </div>
+                <div class="gallery-item">
+                    <img src="Images/hotel.jpg" alt="Image 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="Images/hotel3.jpg" alt="Image 2">
+                </div>
+                <div class="gallery-item">
+                    <img src="Images/hotel2.jpg" alt="Image 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="Images/lake6.jpg" alt="Image 2">
+                </div>
+                <!-- Add more gallery items here -->
+            </div>
+        </section>
+            
+
+        <script src="script.js">
+
+                function openLightbox(imageSrc) {
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImage = document.getElementById('lightboxImage');
+
+        lightboxImage.src = imageSrc;
+        lightbox.style.display = 'block';
+    }
+
+    function closeLightbox() {
+        const lightbox = document.getElementById('lightbox');
+        lightbox.style.display = 'none';
+    }
+
+    // Event listeners to open and close the lightbox
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    galleryItems.forEach(item => {
+        item.addEventListener('click', () => {
+            const imageSrc = item.querySelector('img').src;
+            openLightbox(imageSrc);
+        });
+    });
+
+    document.getElementById('lightbox').addEventListener('click', closeLightbox);
+        </script>
+
+        </body>
+       </html>

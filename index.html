@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="title icon" type="image/png" href="Images/logo.png">
+
+    <link rel="stylesheet" href="styles/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles/css2.css">
+    <link rel="stylesheet" href="styles/media.css">
+
+    <style>
+        .second{
+            background-image: url("Images/bg.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 700px;
+            position: relative;
+        }
+        .about2{
+            background-image: url("Images/jym.jpg");
+            background-size: cover;
+            opacity: 5.5;
+        }
+        .about16{
+            background-image: url("Images/city.jpg");
+            background-size: cover;
+            background-position: center;
+            padding-top: 100px;
+            padding-bottom: 100px;
+        }
+        .about11{
+            background-image: url("Images/baby.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            text-shadow: 1px 3px 4px rgb(2, 2, 2);
+            padding-left: 50%;
+            position: justify;
+        }
+    </style>
+
+    <title>home</title>
+</head>
+<body>
+
+    <div class="">
+        <div class="col-md-12 menu">
+            <div class="col-md-8">
+                <ul>
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="#About">About</a>
+                    </li>
+                    <li>
+                        <a href="tips.html">More</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+                    <li>
+                        <section class="content-section">
+                            <div class="dropdown">
+                                <button class="dropbtn" onclick="toggleDropdown()">Memories</button>
+                                <div id="myDropdown" class="dropdown-content">
+                                    <a href="new.html">Photo Gallaries</a>
+                                    <a href="#">Tour Videos</a>
+                                    <a href="#">Related Events</a>
+                                    <!-- Add more items here -->
+                                </div>
+                            </div>
+                        </section>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-4 search">
+                <form action="">
+                    <input type="text" placeholder="search">
+                    <button>
+                        <i class="fa fa-search"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <div class="col-md-12 second">
+            <marquee><h6 class="">Explore amazing destinations, plan your dream trips, and create unforgettable memories.</h6></marquee>
+            <div class="col-md-12">
+                <div class="center-text">
+                    <!-- <h1 class="text-primary"><span>Welcome</span></h1> -->
+                    <h1 class="text-center">EXPLORE<img src="Images/icon.png" width="250" class="img-fluid" >OWERRI</h1>
+                </div>
+                <div class="button">
+                    <a href="discover.html" class="bg-primary">Discover</a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-md-12 content" >
+            <div class="col-md-6" id="logg">
+                <h2>Language and Currency Support</h2>
+                <p>
+                    Choose your preferred language and currency to make your
+                    browsing and booking experience more convenient.
+                </p>
+
+                <div class="form-group">
+                    <label for="tour">Select Your Language:</label>
+                    <select id="tour" name="tour" required>
+                      <option value="">English Auto</option>
+                      <option value="tour1">Igbo</option>
+                      <option value="tour2">Spanish</option>
+                      <option value="tour3">French</option>
+                    </select>
+                  </div>
+
+            </div>
+            <div class="col-md-12 content-2">
+                <div class="col-md-12 content-inner">
+                    <button onclick="openPopup('signupPopup')" class="btn2">Sign Up</button>
+                    <button onclick="openPopup('loginPopup')" class="btn1">Login</button>
+                </div>
+
+
+                <!-- login popup -->
+                <div class="">
+                <div class="col-md-12 content-inner">
+                    <div id="loginPopup" class="popup tab">
+                        <span class="close" onclick="closePopup('loginPopup')">&times;</span>
+                        <h2>LOG IN</h2>
+                        <form action="profile.html">
+                          <label for="email">Email:</label>
+                          <input type="email" id="email" name="email" required><br><br>
+                      
+                          <label for="password">Password:</label>
+                          <input type="password" id="password" name="password" required><br><br>
+                      
+                          <input type="submit"  value="Login" class="xxx">
+                        </form>
+                      </div>
+                </div>
+                </div>
+
+                <!-- signup popup -->
+                <div class="">
+                <div id="signupPopup" class="popup tab">
+                    <span class="close" onclick="closePopup('signupPopup')">&times;</span>
+                    <h2>SIGN UP</h2>
+                    <form action="profile.html">
+                      <label for="name">Name:</label>
+                      <input type="text" id="name" name="name" required><br><br>
+                      <label for="State">State:</label>
+                      <input type="text" id="State" name="name" required><br><br>
+                  
+                      <label for="email">Email:</label>
+                      <input type="email" id="email" name="email" required><br><br>
+                  
+                      <label for="password">Password:</label>
+                      <input type="password" id="password" name="password" required><br><br>
+                  
+                      <input type="submit" value="Sign Up" class="xxx"><br>
+                      <p>I Already have an Account <a href="#loginPopup">login?</a> </p>
+                    </form>
+                  </div>
+                </div>
+
+
+                <div class="col-md-12 content-inner">
+                    <a href="#logg" class="btn4">Special Offers and Deals</a> 
+                </div>
+                <div class="col-md-12 content-inner">
+                    <a href="tips.html" class="btn3">Travel Tips and Guides</a> 
+                </div>
+            </div>
+
+
+
+            
+        </div>
+
+        <div class="col-md-12 about16">
+            <div class="col-md-12">
+               <a href="" class="video">
+                    <img src="Images/playy.jpg" alt="">
+               </a>
+                <h1>Explore Our Tour Videos</h1>
+              
+            </div>
+        </div>
+
+        <div class="col-md-12 about11">
+            <h1>The ultimate family travel guide</h1>
+            <p>An inspo-packed playbook for getting your next trip into gear</p><br>
+            <a href="tips.html" class="btn15">Read More</a>
+        </div>
+
+
+        <div class="col-md-12" id="About">
+            <div class="col-md-12 about">
+                <h1>About Us</h1>
+                <p>Discover our mission, values, and team.</p>
+            </div>
+            <div class="col-md-12">
+                <div class="col-md-6">
+                    <div class="card">
+                        <h2>Our Mission</h2>
+                        <div class="bg-danger card-p">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vulputate libero sed neque
+                                malesuada, nec vestibulum ligula blandit. Vestibulum ante ipsum primis in faucibus orci luctus et
+                                ultrices posuere cubilia curae; Suspendisse potenti. Proin sed tellus ac dui pretium luctus.
+                                Maecenas pharetra, tellus vitae feugiat varius, ligula nisl commodo nunc, non interdum lorem ligula
+                                non enim.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <h2>Our Values</h2>
+                        <div class="bg-info card-p">
+                            <ul>
+                                <li>Quality: We strive to provide exceptional experiences and services.</li>
+                                <li>Sustainability: We are committed to promoting eco-friendly and responsible tourism.</li>
+                                <li>Customer Satisfaction: We prioritize customer happiness and exceed their expectations.</li>
+                                <li>Inclusivity: We embrace diversity and ensure equal opportunities for everyone.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-12 about2">
+                    <div class="col-md-12">
+                        <h1>ABOUT OWERRI TOURISM</h1>
+                        <p>Welcome to Owerri Tourism, your ultimate guide to the 
+                            beautiful city of Owerri, Nigeria. We are dedicated to 
+                            
+                            showcasing the diverse cultural heritage and natural wonders that Owerri 
+                            has to offer. Whether you are a local resident or a curious traveler, we aim to 
+                            provide you with the best information to make your visit to Owerri memorable.
+                        </p>
+                        <p>Our mission is to promote sustainable tourism in Owerri while preserving its rich history and culture.
+                             We strive to support local businesses and create opportunities for the community to 
+                            thrive through responsible tourism practices.
+                        </p> <br>
+                        <p>Explore the enchanting attractions, indulge in the local delicacies, and immerse yourself in the vibrant traditions of 
+                            Owerri. Let us be your guide to the hidden gems and iconic landmarks that make Owerri a truly unique destination.
+                        </p> <br>
+                        <p>Join us in our journey to discover the heart of Owerri and create lasting memories in this captivating city.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-12 team">
+                <h1>Our Team</h1>
+                <div class="col-md-12 teams">
+                    <div class="col-md-4 teams-inner">
+                        <img src="Images/ceo.JPG" alt="Team Member 1">
+                        <h3>Mr Macdonald</h3>
+                        <p>CEO</p>
+                    </div>
+                    <div class="col-md-4 teams-inner">
+                        <img src="Images/favour.jpg" alt="Team Member 2">
+                        <h3>Jane Smith</h3>
+                        <p>Marketing Manager</p>
+                    </div>
+                    <div class="col-md-4 teams-inner">
+                        <img src="Images/ceo.JPG" alt="Team Member 3">
+                        <h3>David Johnson</h3>
+                        <p>Tour Guide</p>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+
+       
+        <div class="col-md-12 footer">
+            <p>&copy; 2023 Tourism Website. All rights reserved.</p><br>
+            IG @macpes_humble
+            <p><a href="index.html" class="footnote">Home </a> | <a href="contact.html" class="footnote">Contact</a> | <a href="map.html" class="footnote">Maps</a> | <a href=""class="footnote">Chose Language</a> </a></p>
+           <ul class="payment">
+            <img src="Images/BGG.jpg" alt="">
+            <img src="Images/BGG.jpg" alt="">
+            <img src="Images/BGG.jpg" alt="">
+           </ul>
+        </div>
+    </div>
+    <script src="styles/js.js">    
+    </script>
+
+<script>
+    function openPopup(popupId) {
+      var popup = document.getElementById(popupId);
+      popup.style.display = "block";
+    }
+  
+    function closePopup(popupId) {
+      var popup = document.getElementById(popupId);
+      popup.style.display = "none";
+    }
+
+    // drop down 
+    function toggleDropdown() {
+    var dropdownContent = document.getElementById("myDropdown");
+    if (dropdownContent.style.display === "block") {
+        dropdownContent.style.display = "none";
+    } else {
+        dropdownContent.style.display = "block";
+    }
+}
+  </script>
+    
+</body>
+</html>
